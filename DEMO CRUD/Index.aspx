@@ -17,8 +17,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .action_button {
-            margin-top:10px;
-            margin-bottom: 10px;
+            margin-top:5px;
+            margin-bottom: 5px;
         }
         #message{
             color: forestgreen;

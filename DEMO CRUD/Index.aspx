@@ -5,12 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script src="jquery-3.6.0.min.js"></script>
+    <script src="Scripts/JQuery-3.6.0.min.js" type="text/javascript"></script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"/>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .action_button {
             margin-top:10px;
@@ -66,35 +70,35 @@
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">ID</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="id" class="id" name="id" value="" />
+                    <input class="form-control id" type="text" id="id" name="id" value="" />
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Fullname</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="fullname" class="fullname" name="fullname" value=""/>
+                    <input class="form-control fullname" type="text" id="fullname" name="fullname" value=""/>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="email" class="email" name="email" value=""/>
+                    <input class="form-control email" type="text" id="email"name="email" value=""/>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Phone number</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="phone" class="phone" name="phone" value="" />
+                    <input class="form-control phone" type="text" id="phone" name="phone" value="" />
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Faculty</label>
                 <div class="col-sm-6">
-                    <input class="form-control" type="text" id="faculty" class="faculty" name="faculty" value="" />
+                    <input class="form-control faculty" type="text" id="faculty" name="faculty" value="" />
                 </div>
             </div>
             
@@ -115,8 +119,25 @@
             <div id="message"></div>
 
             <table class="">
-                <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
-                    CssClass="table table-condensed table-hover" Width="75%">
+                <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
+                    CssClass="table table-condensed table-hover" Width="75%" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+                    <FooterStyle BackColor="White" ForeColor="#000066"></FooterStyle>
+
+                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+                    <PagerStyle HorizontalAlign="Left" BackColor="White" ForeColor="#000066"></PagerStyle>
+
+                    <RowStyle ForeColor="#000066"></RowStyle>
+
+                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White"></SelectedRowStyle>
+
+                    <SortedAscendingCellStyle BackColor="#F1F1F1"></SortedAscendingCellStyle>
+
+                    <SortedAscendingHeaderStyle BackColor="#007DBB"></SortedAscendingHeaderStyle>
+
+                    <SortedDescendingCellStyle BackColor="#CAC9C9"></SortedDescendingCellStyle>
+
+                    <SortedDescendingHeaderStyle BackColor="#00547E"></SortedDescendingHeaderStyle>
                 </asp:GridView>
             </table>
             
